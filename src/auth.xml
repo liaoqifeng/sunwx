@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auth>
+	<authorities name="商品管理" order="1">
+		<node name="礼品管理" perms="product:prize" value="/back/prize/**" url="/back/prize/list.shtml"  order="1"/>
+		<node name="商品管理" perms="product:manager" value="/back/product/**" url="/back/product/list.shtml"  order="2"/>
+		<node name="商品分类" perms="product:category" value="/back/productCategory/**" url="/back/productCategory/list.shtml" order="3"/>
+		<node name="品牌管理" perms="product:brand" value="/back/brand/**" url="/back/brand/list.shtml" order="4"/>
+		<!-- <node name="规格管理" perms="product:specification" value="/back/spec/**" url="/back/spec/list.shtml" order="4"/>
+		<node name="商品参数" perms="product:paramter" value="/back/parameter/**" url="/back/parameter/list.shtml" order="5"/>
+		<node name="商品属性" perms="product:property" value="/back/property/**" url="/back/property/list.shtml" order="6"/> -->
+	</authorities>
+	<!-- <authorities name="订单管理" order="2">
+		<node name="订单管理" perms="order:manager" value="/back/order/**" url="/back/order/list.shtml" order="1"/>
+		<node name="发货管理" perms="order:deliver" value="/back/deliverInfo/**" url="/back/deliverInfo/list.shtml" order="2"/>
+		<node name="退货管理" perms="order:returns" value="/back/returns/**" url="/back/returns/list.shtml" order="3"/>
+		<node name="收款管理" perms="order:payment" value="/back/paymentInfo/**" url="/back/paymentInfo/list.shtml" order="4"/>
+		<node name="退款管理" perms="order:refunds" value="/back/refunds/**" url="/back/refunds/list.shtml" order="5"/>
+	</authorities> -->
+	<authorities name="会员管理" order="3">
+		<node name="会员管理" perms="member:manager" value="/back/member/**" url="/back/member/list.shtml" order="1"/>
+		<node name="帮派管理" perms="member:faction" value="/back/faction/**" url="/back/faction/list.shtml" order="1"/>
+		<node name="职位管理" perms="member:job" value="/back/job/**" url="/back/job/list.shtml" order="1"/>
+		<node name="论坛分类管理" perms="member:sector" value="/back/sector/**" url="/back/sector/list.shtml" order="4"/>
+		<node name="用户积分管理" perms="member:scoreLog" value="/back/scoreLog/**" url="/back/scoreLog/list.shtml" order="5"/>
+		
+		<!-- <node name="等级管理" perms="member:grade" value="/back/grade/**" url="/back/grade/list.shtml" order="2"/>
+		<node name="安全问题管理" perms="member:question" value="/back/question/**" url="/back/question/list.shtml" order="3"/> -->
+	</authorities>
+	<authorities name="内容管理" order="4">
+		<node name="文章列表" perms="content:article" value="/back/article/**" url="/back/article/list.shtml" order="1"/>
+		<node name="文章分类" perms="content:category" value="/back/articleCategory/**" url="/back/articleCategory/list.shtml" order="2"/>
+		<node name="标签管理" perms="content:tag" value="/back/tag/**" url="/back/tag/list.shtml" order="3"/>
+		<node name="游戏列表" perms="content:game" value="/back/game/**" url="/back/game/list.shtml" order="4"/>
+		<node name="任务列表" perms="content:task" value="/back/task/**" url="/back/task/list.shtml" order="5"/>
+		<node name="挖金币管理" perms="content:dugCoin" value="/back/dugCoin/**" url="/back/dugCoin/edit/1.shtml" order="6"/>
+		<node name="礼品兑换管理" perms="content:exchangeInfo" value="/back/exchangeInfo/**" url="/back/exchangeInfo/list.shtml" order="7"/>
+		<node name="自动回复管理" perms="content:autoReply" value="/back/autoReply/**" url="/back/autoReply/list.shtml" order="8"/>
+		<!-- <node name="红包管理" perms="content:bonus" value="/back/bonus/**" url="/back/bonus/list.shtml" order="9"/> -->
+	</authorities>
+	<!-- <authorities name="运营管理" order="5">
+		<node name="促销管理" perms="businesses:promotion" value="/back/promotion/**" url="/back/promotion/list.shtml" order="1"/>
+		<node name="优惠券管理" perms="businesses:coupon" value="/back/coupon/**" url="/back/coupon/list.shtml" order="2"/>
+		<node name="优惠码管理" perms="businesses:code" value="/back/couponInfo/**" url="/back/couponInfo/list.shtml" order="3"/>
+	</authorities> -->
+	<authorities name="系统管理" order="6">
+		<node name="管理员管理" perms="system:admin" value="/back/admin/**" url="/back/admin/list.shtml" order="1"/>
+		<node name="角色管理" perms="system:role" value="/back/role/**" url="/back/role/list.shtml" order="2"/>
+		<node name="地区管理" perms="system:area" value="/back/area/**" url="/back/area/list.shtml" order="3"/>
+		
+		<!-- <node name="物流管理" perms="system:logistics" value="/back/logistics/**" url="/back/logistics/list.shtml" order="4"/>
+		<node name="配送方式" perms="system:deliver" value="/back/deliverway/**" url="/back/deliverway/list.shtml" order="5"/>
+		<node name="运费模板" perms="system:templete" value="/back/freightTemplet/**" url="/back/freightTemplet/list.shtml" order="6"/>
+		<node name="支付方式" perms="system:payment" value="/back/paymentway/**" url="/back/paymentway/list.shtml" order="7"/> -->
+	</authorities>
+</auth>

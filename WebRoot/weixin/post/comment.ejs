@@ -1,0 +1,44 @@
+
+		
+		<li class="mui-table-view-cell mui-hidden">cared
+					<div id="M_Toggle" class="mui-switch mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</li>
+			
+					<% if(list.length>0){ 
+					for(var i=0; i<list.length; i++) {
+ var row = list[i];
+ var mr = 42;
+ if (row.belong){
+ 	mr = 142;
+ }
+ 
+%>
+						<li class="mui-table-view-cell mui-media" id="commentLi_<%=row.id%>" style="padding-right:0px">
+							<div class="wx-swipe" style="height:100%;">
+								<img class=" mui-pull-left commentPic"
+									src="<%=row.member.profileImage%>"  onclick="selectMember('<%=row.member.id%>')" >
+									<img  class="commentPraisePic" id="commentPraisePic_<%=row.id%>" onclick="commentPraise('<%=row.id%>')"
+									src="../common/images/like<%=row.praised%>.png">	
+								<div class="mui-media-body" style="margin-left:45px;margin-right:<%=mr%>px;"  onclick="reply('<%=row.postId%>','<%=row.id%>')">
+								
+									<h5 class="commentTitle" id="commentMember_<%=row.id%>"><%= row.member.realname%></h5>
+									<h6 class="commentDate"><%= row.showDate%></h6>
+									<h5 class="commentContent">
+										<% if(row.replyMember != null){ %>
+											回复 <%= row.replyMember.realname%>：
+										<% }%>
+									<%= row.content%></h5>
+									
+								</div>
+								
+								
+							</div>
+						</li>
+				<% 
+				} } else {%>
+				
+				
+				<li class="mui-table-view-cell mui-media">&nbsp;</li>
+				<% }%>

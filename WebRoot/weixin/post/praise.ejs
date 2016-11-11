@@ -1,0 +1,12 @@
+
+				<div class="lineleft" id="praisePre"><img src="../common/images/left.png"/></div>
+				<div class="lineright" id="praiseNext"><img src="../common/images/right.png"/></div>
+				<div  class="linecenter" id="praiseWrapper">
+					<div style="width: <%=list.length*40%>px;">
+							<% for(var i=0; i<list.length; i++) {
+ 								var row = list[i];
+							%>
+							<img src="<%=row.member.profileImage%>" class="praiseImage"  onclick="selectMember('<%=row.member.id%>')"/>
+							<% } %>
+					</div>
+				</div>

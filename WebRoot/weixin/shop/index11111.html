@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>选择地区1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> 
+		<meta http-equiv="Pragma" content="no-cache" /> 
+		<meta http-equiv="Expires" content="0" />
+		<link rel="stylesheet" type="text/css" href="../common/plugin/select_area/mobile-select-area.css">
+		<script type="text/javascript" src="../common/plugin/select_area/zepto.min.js"></script>
+		<script type="text/javascript" src="../common/plugin/select_area/dialog.min.js"></script>
+		<script type="text/javascript" src="../common/plugin/select_area/mobile-select-area.js"></script>
+	</head>
+	<body>
+		<input type="text" id="txt_area" value="浙江省 杭州市 滨江区"/>
+		<input type="hidden" id="hd_area" value="1,1,1"/>
+		<script>
+		var selectArea = new MobileSelectArea();
+		selectArea.init({trigger:'#txt_area',value:$('#hd_area').val(),data:'data.json'});
+		</script>
+	</body>
+</html>

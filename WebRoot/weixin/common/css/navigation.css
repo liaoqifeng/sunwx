@@ -1,0 +1,119 @@
+.navigation {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 200;
+	width: 100%;
+}
+
+/* Little tricking with positions */
+.navigation  li {
+	float: left; /* Show list items inline */
+	width: 33.33%;
+	position: relative;
+	background: #fff;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+
+/* Playing with Main Categories */
+.navigation  li a {
+	color: #313131;
+	display: block; /* Making sure a element covers whole li area */
+	padding: 6px 7px 6px 7px;
+	text-decoration: none; /* No underline */
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 200;
+	height: 30px;
+	margin: 5px 0;
+	border-left: 1px solid #ccc;
+	color: #313131;
+	font-size: 18px;
+}
+
+.navigation  li a span {
+	border-left: 1px solid #ccc;
+	width: 100px;
+	color: #313131;
+	font-size: 18px;
+}
+
+.navigation  li a:hover {
+	color: #313131;
+}
+
+/* Sub Cat Menu stuff*/
+.navigation  ul {
+	position: absolute;
+	left: 0;
+	display: none; /* Hide it by default */
+	margin: 0 0 0px 0px;
+	padding: 0;
+	list-style: none;
+	border-bottom: 0px solid #F2861D;
+	width: 100%;
+}
+
+.navigation  ul li {
+	width: 100%;
+	float: left;
+	border-top: none;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin-top: -1px;
+}
+
+/* Sub Cat menu link properties */
+.navigation  ul a {
+	display: block; /* Making sure a element covers whole li area */
+	height: 40px;
+	padding: 0px;
+	color: #313131;
+	text-decoration: none;
+	border: 0px;
+	margin: 0px;
+}
+
+.navigation  ul a span {
+	vertical-align: middle;
+	border: 0px;
+	line-height: 40px;
+	margin: 0px;
+	height: 40px;
+	color: #313131;
+	font-size: 16px;
+}
+
+}
+.navigation  ul a:hover {
+	color: #313131;
+}
+
+.masklayer_div {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 180;
+	background: rgba(0, 0, 0, 0);
+}
+
+.masklayer_div.on {
+	display: block;
+}
+
+.clear {
+	background: rgba(0, 0, 0, 0);
+}
+
+.nagidiv {
+	z-index: 200;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}

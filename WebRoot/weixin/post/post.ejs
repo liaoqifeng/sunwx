@@ -1,0 +1,74 @@
+<% for(var i=0; i<list.length; i++) {
+ var post = list[i];
+%>
+			
+							<li class="mui-table-view-cell mui-media" style="margin-top: 15px;padding:0px;" >
+							<div style="padding: 10px;">
+							<img
+								class="mui-media-object mui-pull-left" src="<%=post.member.profileImage%>" style="border-radius: 5px;" onclick="selectMember('<%=post.member.id%>')"></img>
+								<div style="margin-left: 50px;" onclick="select('<%=post.id%>')">
+									
+										<span class="postMemberName"><%=post.member.realname%></span>&nbsp;
+									<% if (post.badge>0) {%>
+										<span style="color: red;">●</span>
+									<% } %>
+									<span class="sector"
+										style="float: right;">
+									<% if(post.type  == 1) {%>  <%=post.postSectorName%> <% } else {%>活动<% } %> </span>
+									<p class="postDate"><%=post.showDate%></p>
+									<% if(post.type  == 1) {%>
+										<p class="activityTitle" ><%=post.title%></p>
+										<p class="postContent">
+											<%=post.content%>
+										</p>
+										<br />
+									<% for(var j=0; j<post.postImages.length; j++) {
+										 var image = post.postImages[j];
+										%>
+									<div class='picContainer'>
+										<div class='picDummy'></div>
+										<div class='picContent'>
+											<img class="pic" src="<%=image.name%>" onclick="prePic('<%=image.name%>' , '<%=post.postImagesStr%>')"></img>
+												</div>
+									</div>
+									<% } %>
+										<div style="clear: both;"></div>
+
+									<% } %>
+									<% if(post.type  == 2) {%>
+									
+											<% if(post.postImages.length > 0) { %>
+												<img src="<%=post.postImages[0].name%>" class="activityImage" onclick="prePic('<%=post.postImages[0].name%>' , '<%=post.postImagesStr%>')"/>
+											<% } %>
+										<div class="activityContentDiv">
+											<p class="activityTitle"><%=post.title%></p>
+											<p class="activityContent">
+												<img src="../common/images/pin.png" style="vertical-align: middle;" />&nbsp;<span
+													style="vertical-align: middle;"><%=post.area%></span>
+											</p>
+											<p class="activityContent">
+												<img src="../common/images/clock.png" style="vertical-align: middle;" />&nbsp;<span
+													style="vertical-align: middle;"><%=post.beginDateStr%></span>
+											</p>
+
+											<p class="activityContent">
+												<img src="../common/images/info.png" style="vertical-align: middle;" />&nbsp;<span
+													style="vertical-align: middle;"><% if (post.content ==null) {%>无活动说明 <% } else {%><%=post.content %><%}%>
+													</span>
+											</p>
+										</div>
+										
+									<% } %>
+								</div>
+								</div>
+							<nav class="mui-bar  mui-bar-tab toolbar" style="margin-top:-1px;"> <a class="mui-tab-item"
+								href="javascript:comment('<%=post.id%>')"
+								style="border-right: 1px solid #ccc;height: 22px;line-height: 22px;vertical-align: middle;padding: 0px;margin: 0px"><img
+								style="vertical-align: middle;" src="../common/images/pinlun.png" />&nbsp;<span style="vertical-align: middle;color: #a0a0a0;"
+								>评论</span>&nbsp;<span id="comment_<%=post.id%>" style="vertical-align: middle;color: #a0a0a0;"
+								><%=post.postCommentCount%></span></a> <a class="mui-tab-item" style="height: 22px"
+								href="javascript:praise('<%=post.id%>')"><img
+								style="vertical-align: middle;" src="../common/images/like<%=post.praised%>.png" />&nbsp;
+								<span id="praise_<%=post.id%>" style="vertical-align: middle;color: #a0a0a0;"><%=post.postPraiseCount%></span></a> 
+								</li>
+		<% } %>

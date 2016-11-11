@@ -1,0 +1,12 @@
+
+				<div class="lineleft" id="joinPre"><img src="../common/images/left.png"/></div>
+				<div class="lineright" id="joinNext"><img src="../common/images/right.png"/></div>
+				<div  class="linecenter" id="joinWrapper">
+					<div style="width: <%=list.length*40%>px;">
+							<% for(var i=0; i<list.length; i++) {
+ 								var row = list[i];
+							%>
+							<img src="<%=row.member.profileImage%>" class="praiseImage" style="margin-bottom:0px;"  onclick="selectMember('<%=row.member.id%>')"/>
+							<% } %>
+					</div>
+				</div>
